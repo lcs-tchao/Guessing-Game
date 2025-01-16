@@ -92,10 +92,19 @@ struct GameView: View {
     // MARK: Functions
     func checkGuess() {
         
+        
         // Provide feedback to the user
         // When should they guess higher?
         // When should then guess lower?
         // FILL IN THIS CODE
+        
+        if target < selectedNumber {
+            feedback = "Number is Lower"
+          }else if target > selectedNumber {
+              feedback = "Number is Higher"
+          }else if target == selectedNumber {
+              feedback  = "Good guess you got it right"
+          }
         
         // Save the user's guesses
         guessesMade.append(selectedNumber)
